@@ -2,17 +2,19 @@
  
 int main() {
  
-    int x, y, i, n;
-    double z;
+    float x, sum = 0, a=0;
 
-    scanf("%d", &n);
-    for(i = 1; i <= n; i++){
-        scanf("%d%d", &x, &y);
-        if(y == 0){
-            printf("divisao impossivel\n");
+    while(1){
+        scanf("%f", &x);
+        if(x < 0 || x > 10){
+            printf("nota invalida\n");
         }else{
-            z = x / (y*1.0);
-            printf("%.1lf\n", z);
+            sum += x;
+            a++;
+        }
+        if(a == 2){
+            printf("media = %.2f\n", sum / 2.00);
+            break;
         }
     }
     return 0;
