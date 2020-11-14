@@ -2,20 +2,17 @@
  
 int main() {
  
-    int x, y;
+    int x, y, i, n;
+    double z;
 
-    while(1){
-        scanf("%d %d", &x, &y);
-        if(x == 0 || y == 0){
-            break;
-        }else if(x > 0 && y > 0){
-            printf("primeiro\n");
-        }else if(x > 0 && y < 0){
-            printf("quarto\n");
-        }else if(x < 0 && y < 0){
-            printf("terceiro\n");
-        }else if(x < 0 && y > 0){
-            printf("segundo\n");
+    scanf("%d", &n);
+    for(i = 1; i <= n; i++){
+        scanf("%d%d", &x, &y);
+        if(y == 0){
+            printf("divisao impossivel\n");
+        }else{
+            z = x / (y*1.0);
+            printf("%.1lf\n", z);
         }
     }
     return 0;
