@@ -3,29 +3,18 @@
 int main()
 {
 
-    int x, i;
+    int a, n, i, x = 0;
 
-    while (1)
-    {
-        scanf("%d", &x);
+    scanf("%d%d", &a, &n);
 
-        if (x == 0)
-        {
-            break;
-        }
-        else
-        {
-            for (i = 1; i <= x; i++)
-            if(i == x){
-                printf("%d", i);
-            }
-            else
-            {
-                printf("%d ", i);
-            }
-        }
-        printf("\n");
+    while(n <= 0){
+        scanf("%d", &n);
     }
-
+    for(i = 1; i <= n; i++){
+        x += a;
+        a++;
+    }
+    printf("%d\n", x);
     return 0;
 }
+
