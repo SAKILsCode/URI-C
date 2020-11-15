@@ -1,7 +1,7 @@
 #include <stdio.h>
- 
+
 int main() {
- 
+
     float s = 0, a = 1, dv;
     int i = 1;
 
