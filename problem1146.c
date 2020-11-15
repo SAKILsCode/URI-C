@@ -1,20 +1,30 @@
-#include <stdio.h>
 
 int main()
 {
 
-    int a, n, i, x = 0;
+    int x, i;
 
-    scanf("%d%d", &a, &n);
+    while (1)
+    {
+        scanf("%d", &x);
 
-    while(n <= 0){
-        scanf("%d", &n);
+        if (x == 0)
+        {
+            break;
+        }
+        else
+        {
+            for (i = 1; i <= x; i++)
+            if(i == x){
+                printf("%d", i);
+            }
+            else
+            {
+                printf("%d ", i);
+            }
+        }
+        printf("\n");
     }
-    for(i = 1; i <= n; i++){
-        x += a;
-        a++;
-    }
-    printf("%d\n", x);
+
     return 0;
 }
-
