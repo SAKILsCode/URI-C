@@ -4,7 +4,7 @@ int main() {
     
     int x, y, i, j, k = 0;
     scanf("%d %d", &x, &y);
-    if(x<100000 && x>1 && x<20 && x<y){
+    if(y<100000 && x>1 && x<20 && x<y){
         while(1){
 
             if(k == y){
