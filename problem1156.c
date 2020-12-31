@@ -3,7 +3,7 @@
 int main() {
 
     float s = 0, a = 1, dv;
-    int i = 1;
+    int i;
 
     for(i = 1; i <= 39; i+=2){
         dv = i / a;
