@@ -1,35 +1,38 @@
 #include <stdio.h>
- 
-int main() {
- 
-    int i, j;
-    int spy = 11;
-    float num;
-    float sum = 0.0;
-    int counter = 0;
-    char operation;
 
-    scanf("%c", &operation);
-    for(i = 0; i <= 11; i++){
-        for(j = 0; j <= 11; j++){
-            scanf("%f", &num);
-            if(j < spy){
-                // printf("* ");
-                sum += num;
-                counter++;
-            }
-            // else{
-            //     printf("[]");
-            // }
+int main()
+{
+    int i, j, counter = 0;
+    float arr[12][12], sum = 0.0;
+    char indicator;
+
+    scanf("%c", &indicator);
+
+    for (i = 0; i < 12; i++)
+    {
+        for (j = 0; j < 12; j++)
+        {
+            scanf("%f", &arr[i][j]);
         }
-        spy--;
-        // printf("\n");
     }
-    if(operation == 'S'){
+
+    for (i = 0; i <= 10; i++)
+    {
+        for (j = 10 - i; j >= 0; j--)
+        {
+            sum += arr[i][j];
+            counter++;
+        }
+    }
+
+    if (indicator == 'S')
+    {
         printf("%.1f\n", sum);
-    }else if(operation == 'M'){
-        printf("%.1f\n", sum/counter);
     }
- 
+    if (indicator == 'M')
+    {
+        printf("%.1f\n", sum / counter);
+    }
+
     return 0;
 }
