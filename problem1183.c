@@ -2,7 +2,7 @@
 
 int main()
 {
-    int i, j, counter;
+    int i, j, counter = 0;
     float arr[12][12], sum = 0.0;
     char indicator;
 
